@@ -1,0 +1,20 @@
+.columnForm{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    & > *{
+        margin: 5px;
+    }
+    @media (max-width: 767px) {
+        & > *{
+            flex: 1 0 50%; 
+            max-width: 50%;
+            text-align: center;
+        }
+        &:last-child{
+            flex-basis: 100%; 
+        }
+    }
+};
