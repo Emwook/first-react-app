@@ -13,7 +13,7 @@ const SearchForm = () => {
     const findKey = e =>{
         e.preventDefault();
         dispatch({ type: 'CHANGE_SEARCH_KEY', payload: { searchKey: localKey } });
-        setLocalKey('');
+        setLocalKey(searchKey);
     };
 
     return (
