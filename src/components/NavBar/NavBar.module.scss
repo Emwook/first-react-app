@@ -1,0 +1,22 @@
+@import '../../styles/settings.scss';
+
+//ugh 
+nav{
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    background:darken($color-dark, 3%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    a{
+        display: flex;
+        text-decoration: none;
+        i{
+            font-size: 24px;
+        }
+    }
+}
