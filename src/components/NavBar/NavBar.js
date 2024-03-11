@@ -3,18 +3,18 @@ import Container from '../Container/Container';
 
 const NavBar = () =>{
     return (
-        <nav className={styles.navBar}>
-            <Container>
-                <div>
-                    <a className={styles.icon} href='/'><span><i className='fa fa-tasks'/></span></a>
-                </div>
-                <div>
-                    <a className={styles.home} href='/'><span>Home</span></a>
-                    <a className={styles.favorite} href='/favorite'><span>Favorite</span></a>
-                    <a className={styles.about} href='/about'><span>About</span></a>
-                </div>
-            </Container>
-        </nav>
+        <div className={styles.navContainer}>
+        <Container>
+            <nav className={styles.navBar}>
+                <a className={styles.navIcon} href='/'><span><i className='fa fa-tasks'/></span></a>
+                <ul className={styles.navList}>
+                    <li><a className={styles.home} href='/'><p>Home</p></a></li>
+                    <li><a className={styles.favorite} href='/favorite'><p>Favorite</p></a></li>
+                    <li><a className={styles.about} href='/about'><p>About</p></a></li>
+                </ul>
+            </nav>
+        </Container>
+        </div>
     );
 }
 

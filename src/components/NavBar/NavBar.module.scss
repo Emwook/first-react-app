@@ -1,22 +1,40 @@
 @import '../../styles/settings.scss';
 
-//ugh 
-nav{
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-    background:darken($color-dark, 3%);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    color: white;
-    padding: 10px;
-    text-decoration: none;
-    a{
-        display: flex;
-        text-decoration: none;
-        i{
-            font-size: 24px;
+.navContainer{
+    margin: 0;
+    padding: 0;
+    &:first-child{
+        background: darken($color-dark, 3%);
+        margin-top: 0;
+        nav{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: nowrap;
+            margin: auto 0;
+            a{
+                text-decoration: none;
+                color: $color-light;
+            }
+            .navIcon{
+                position: relative;
+                margin-left: 24px;
+                font-size: 24px;
+            }
+            .navList{
+                list-style: none;
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                margin-right: 24px;
+                li{
+                    font-size: 16px;
+                    font-weight: bold;
+                    padding: 5px;
+                }
+            }
         }
     }
 }
