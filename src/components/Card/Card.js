@@ -11,8 +11,7 @@ const Card = (props) =>{
 
     const toggleFavorite = e =>{
         e.preventDefault();
-        console.log(id);
-        dispatch(toggleCardFavorite({ id }));
+        dispatch(toggleCardFavorite( id ));
     };
 
    return (

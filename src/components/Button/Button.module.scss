@@ -25,14 +25,6 @@
             background: darken($color-warning, 5%);
         }
     }
-
-    &.transparent {
-        background: transparent;
-
-        &:hover {
-            color: darken($color-light, 20%);
-        }
-    }
 }
 
 .transparent{
@@ -43,5 +35,15 @@
     padding: 0;
     &.isFavorite{
         color: $color-warning;
+        scale: 110%;
+        &:hover {
+            color: darken($color-warning, 10%);
+        }
+    }
+    &:hover {
+        scale: 110%;
+        background: none;
+        color: darken($color-warning, 5%);
+        transition: 0.1s all ease-in-out;
     }
 }

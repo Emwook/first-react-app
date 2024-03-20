@@ -1,0 +1,14 @@
+@use "sass:math";
+@import '../../styles/settings.scss';
+
+.cards {
+    background-color: $color-light;
+    position: relative;
+    margin: auto;
+    max-width: 30%;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 10px;
+    border-radius: 5px;
+    color: $color-dark;
+}
