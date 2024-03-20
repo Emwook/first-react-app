@@ -1,7 +1,16 @@
+import clsx from 'clsx';
 import styles from './Button.module.scss';
 
-const Button = props => {
-    return <button className={styles.button}type="text">{props.children}</button>
-}
+const Button = ({ className, children, isFavorite }) => {
 
+    const classFromProps = className && styles[className];
+    
+    return (
+        <button className={clsx({ [styles.isFavorite]: isFavorite }, styles.button, classFromProps)} type="text">
+          {children}
+        </button>
+      );
+      
+};
+  
 export default Button;
