@@ -34,10 +34,8 @@ const initialState = {
       { id: 5, columnId: 3, title: 'The Witcher', isFavorite: false },
       { id: 6, columnId: 3, title: 'Skyrim', isFavorite: false }
     ],
-
-    search: {
-      searchKey: '',
-    },
+    
+    searchKey: '',
 
     lists: [ 
       {

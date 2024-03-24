@@ -13,7 +13,7 @@ const SearchForm = () => {
 
     const findKey = e =>{
         e.preventDefault();
-        dispatch(changeSearchKey({ searchKey: localKey }));
+        dispatch(changeSearchKey( localKey ));
     };
 
     return (

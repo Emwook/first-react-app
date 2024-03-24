@@ -7,7 +7,6 @@ import styles from './Favorite.module.scss';
 
 const Favorite = () => {
     const favoriteCards = useSelector(state => getFavoriteCards(state));
-    console.log(favoriteCards);
 
     return(
         <div>

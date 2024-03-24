@@ -4,9 +4,9 @@ import shortid from 'shortid';
 import { strContains } from '../utils/strContains';
 
 //selectors
-export const getFilteredCards = ({ cards, search }, columnId) => 
-  cards.filter(card => card.columnId === columnId && strContains(card.title, search.searchKey));
-export const getSearchKey = (state => state.search.searchKey);
+export const getFilteredCards = ({ cards, searchKey }, columnId) => 
+  cards.filter(card => card.columnId === columnId && strContains(card.title, searchKey));
+export const getSearchKey = (state => state.searchKey);
 
 export const getListById = ({ lists }, listId) => lists.find(list => list.id === listId);
 export const getColumnsByList = ( { columns }, listId ) => columns.filter(column => column.listId === listId);
@@ -52,7 +52,7 @@ const cardsReducer = (statePart = [], action) => {
 const searchKeyReducer = (statePart = '', action) => {
   switch(action.type) {
     case 'CHANGE_SEARCH_KEY':
-      return {...statePart, search: action.payload} ;
+      return action.payload ;
     default:
       return statePart;
 }}
@@ -62,7 +62,7 @@ const reducer = (state, action) => {
     lists: listsReducer(state.lists, action),
     columns: columnsReducer(state.columns, action),
     cards: cardsReducer(state.cards, action),
-    searchString: searchKeyReducer(state.search, action)
+    searchKey: searchKeyReducer(state.searchKey, action)
 };
   return newState;
 };
