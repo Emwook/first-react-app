@@ -1,6 +1,6 @@
 import styles from './Card.module.scss'
 import { useDispatch, useSelector } from 'react-redux';
-import { checkIfFavoriteCard, toggleCardFavorite } from '../../redux/store';
+import { checkIfFavoriteCard, toggleCardFavorite } from '../../redux/cardsRedux.js';
 import Button from '../Button/Button.js';
 
 
