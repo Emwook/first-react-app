@@ -20,7 +20,7 @@ const CardForm = (props) => {
     return (
         <form className={styles.columnForm} onSubmit={handleSubmit}>
             <span>Title: </span><TextInput value={title} onChange={e => setTitle(e.target.value)} />
-            <Button>Add column</Button>
+            <Button>Add Card</Button>
         </form>
     );
 };
