@@ -11,3 +11,13 @@
     justify-content: space-between;
     font-weight: bold;
 }
+
+.iconBox {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    form{
+        padding-left: 8px;
+    }
+}
+
